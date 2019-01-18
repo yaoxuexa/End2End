@@ -9,7 +9,7 @@ Automated cell detection and localization from microscopy images are significant
 
 **Setup**
 
-Download the [data][http://tupac.tue-image.nl/node/3] from MICCAI grand challenge of mitosis detection.
+Download the [data](http://tupac.tue-image.nl/node/3) from MICCAI grand challenge of mitosis detection.
 
 Download and install the python package scikit-image for radon transform and inverse radon transform.
 
