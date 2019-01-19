@@ -4,7 +4,7 @@ Training Convolutional Neural Networks and Compressed Sensing End-to-End for Mic
 
 This repository contains the code for the paper "Training Convolutional Neural Networks and Compressed Sensing End-to-End for Microscopy Cell Detection" (now under review at IEEE Trans. on Medical Imaging) by Yao Xue, Gilbert Bigras, Judith Hugh, Nilanjan Ray.
 
-<img src="https://github.com/yaoxuexa/End2End/blob/master/sample.jpg" width = "500" height = "500" div align=center>
+<img src="https://github.com/yaoxuexa/End2End/blob/master/sample.jpg" width = "700" height = "500" div align=center>
 
 **Introduction**
 
