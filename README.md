@@ -20,14 +20,14 @@ Our implementation is using the deep learning library: Tensorflow. See the instr
 
 **Usage**
 
-To run the proposed end-to-end CNNCS model, you can clone this repo and run the demo code "CNNCS_test.m".
+AMIDA dataset comes from a mitosis detection challenge hold by MICCAI at 2016. It contains 587 training images and 34 testing images in size of 2000*2000 pixels. Images and ground-truth cell centroid coordinates of training set are in mitoses_image_data_part_1.zip, mitoses_image_data_part_2.zip, mitoses_image_data_part_3.zip and mitoses_ground_truth.zip. Testing images are in mitoses-test-image-data.zip. Unzip them into the "data/original/" folder.
+
+So far, ground-truth cell centroid coordinates of the testing set is not released by the contest organizer. To get our model's detection results on the testing set of AMIDA-2016 dataset. You can firstly unzip AMIDA16-ECNNCS.zip then run "ECNNCS_test.m" to visualize the detected mitosis by our trained ECNNCS model.
 
 For training the model on your own data, the procedures are as follows:
 
-Run Create_OA.m to create observation axes based on which cell coordinates are encoded.
-
 Run CNNCS_Encode_trainset.m to generate training exmples list from downloaded dataset and encode the ground-truth cell coordinates to label vectors. You can also perform data augmentation using this .m file to supplement your training set, if necessary.
 
-cd to the home of Mxnet, generate the required .bin file from your training data list and label vectors by command: ./bin/im2rec /path-to-training-data-list.txt /local /path-of-bin-file-saved-to label_width=3090 quality=100
+cd to the home of project, 
 
-Start training the neural network based regressor by calling the "Train_NN_regressor.py": python /path-to-"Train_NN_regressor.py" --network resnet-28-small --data-dir /path-to-bin-file --gpus 0,1 --batch-size 40 --lr 0.01 --lr-factor 0.1 --lr-factor-epoch 10 --model-prefix /path-of-model-saved-to --num-epochs 30 2>&1 | tee /path-to-log.txt
+Start training the model by calling the "Train_NN_regressor.py": python /path-to-"Train_NN_regressor.py" --network resnet-28-small --data-dir /path-to-bin-file --gpus 0,1 --batch-size 40 --lr 0.01 --lr-factor 0.1 --lr-factor-epoch 10 --model-prefix /path-of-model-saved-to --num-epochs 30 2>&1 | tee /path-to-log.txt
