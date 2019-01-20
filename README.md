@@ -24,8 +24,6 @@ For training the model on your own data, the procedures are as follows:
 
 Run ECNNCS_encode_trainset.m to generate your training image list and encode the ground-truth cell coordinates to label vectors. You can also perform data augmentation using this .m file to supplement your training set, if necessary.
 
-cd to the home of project, 
+cd to the home of project, train the model by "python ECNNCS_train.py /path-to-trainList-file /path-to-validationList-file /path-of-model-saved-to"
 
-train the model by "python ECNNCS_train.py /path-to-trainList-file /path-to-validationList-file /path-of-model-saved-to"
-
-contact: yxue2@ualberta.ca
+contact: yxue2atualbertadotca
