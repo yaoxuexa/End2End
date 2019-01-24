@@ -6,9 +6,7 @@ import math
 import numpy.linalg as la
 import numpy as np
 import scipy.io
-
 from dataset import Dataset
-#from network import *
 
 def main():
     train_file = sys.argv[1]
